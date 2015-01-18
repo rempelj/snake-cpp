@@ -5,6 +5,7 @@
  *      Author: justinrempel
  */
 
+#include "Game.h"
 #include "Snake.h"
 #include "Board.h"
 
@@ -20,4 +21,5 @@ void Snake::moveForward() {
 	for (int i = 0; i < segments.size(); i++) {
 		segments.at(i).moveForward();
 	}
+
 }

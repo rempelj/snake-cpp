@@ -10,9 +10,7 @@
 
 int main() {
 
-	Game game;
-
 	while(true) {
-		game.update();
+		Game::instance().update();
 	}
 }

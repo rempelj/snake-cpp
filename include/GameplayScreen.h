@@ -16,7 +16,15 @@ private:
 	Board board;
 
 public:
+	int updateInterval;
+
+	GameplayScreen();
+
 	virtual void update();
+
+	Board *getBoard() {
+		return &board;
+	}
 };
 
 #endif /* GAMESCREEN_H_ */

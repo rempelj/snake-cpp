@@ -9,5 +9,5 @@
 #include "NoItem.h"
 
 std::string NoItem::toString() {
-	return std::string("`");
+	return std::string("` ");
 }

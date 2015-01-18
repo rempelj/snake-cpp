@@ -7,6 +7,11 @@
 
 #include <stdio.h>
 #include "GameplayScreen.h"
+#include <unistd.h>
+
+GameplayScreen::GameplayScreen() {
+	updateInterval = 1000000;
+}
 
 void GameplayScreen::update(){
 	board.snake.moveForward();
@@ -20,4 +25,6 @@ void GameplayScreen::update(){
 		}
 		printf("\n");
 	}
+
+	usleep(updateInterval);
 }

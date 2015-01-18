@@ -15,16 +15,19 @@
 class Board {
 private:
 	std::pair<int,int> indexToCoords(int i);
+	int coordsToIndex(int x, int y);
+	void setBlank(int index);
 
 public:
-	static const int ROWS = 5;
-	static const int COLS = 5;
+	static const int ROWS = 25;
+	static const int COLS = 25;
 
 	AbstractItem *tiles[ROWS * COLS];
 	Snake snake;
 
 	Board();
-	AbstractItem *getItem(int row, int col);
+	AbstractItem *getItem(int x, int y);
+	void itemMoved(AbstractItem *item);
 };
 
 

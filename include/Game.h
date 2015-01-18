@@ -15,10 +15,22 @@ private:
 	GameplayScreen gameplayScreen;
 	Screen *activeScreen;
 
-public:
 	Game();
+	Game(Game const&);
+	void operator=(Game const&);
+
+public:
+	static Game& instance()
+	{
+		static Game instance;
+		return instance;
+	}
+
 	void update();
 
+	GameplayScreen *getGameplayScreen() {
+		return &gameplayScreen;
+	}
 };
 
 
