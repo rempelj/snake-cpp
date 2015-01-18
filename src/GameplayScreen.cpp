@@ -6,8 +6,18 @@
  */
 
 #include <stdio.h>
-#include "../include/GameplayScreen.h"
+#include "GameplayScreen.h"
 
 void GameplayScreen::update(){
-	printf("gameplay screen update\n");
+	board.snake.moveForward();
+
+	// "draw" the board
+	printf("\n");
+	for(int y = 0; y < board.ROWS; y++) {
+		for(int x = 0; x < board.COLS; x++) {
+			AbstractItem *item = board.getItem(x,y);
+			printf(item->toString().c_str());
+		}
+		printf("\n");
+	}
 }

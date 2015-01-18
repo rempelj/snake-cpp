@@ -5,7 +5,7 @@
  *      Author: justinrempel
  */
 
-#include "../include/Game.h"
+#include "Game.h"
 
 Game::Game() {
 	activeScreen = &gameplayScreen;

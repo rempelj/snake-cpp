@@ -9,8 +9,12 @@
 #define GAMESCREEN_H_
 
 #include "Screen.h"
+#include "Board.h"
 
 class GameplayScreen : public Screen {
+private:
+	Board board;
+
 public:
 	virtual void update();
 };

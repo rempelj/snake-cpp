@@ -13,7 +13,6 @@
 class Game {
 private:
 	GameplayScreen gameplayScreen;
-
 	Screen *activeScreen;
 
 public:
