@@ -10,6 +10,9 @@
 #include "Game.h"
 
 void SnakeSegment::moveForward() {
+	int oldX = x;
+	int oldY = y;
+
 	switch(dir) {
 	case N:
 		y--;
@@ -41,7 +44,16 @@ void SnakeSegment::moveForward() {
 		y = 0;
 	}
 
-	Game::instance().getGameplayScreen()->getBoard()->itemMoved(this);
+	Board *board = Game::instance().getGameplayScreen()->getBoard();
+
+	if (board->isEmpty(x,y)) {
+		board->itemMoved(this);
+	} else {
+		x = oldX;
+		y = oldY;
+	}
+
+
 }
 
 std::string SnakeSegment::toString() {

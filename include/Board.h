@@ -28,6 +28,7 @@ public:
 	Board();
 	AbstractItem *getItem(int x, int y);
 	void itemMoved(AbstractItem *item);
+	bool isEmpty(int x, int y);
 };
 
 

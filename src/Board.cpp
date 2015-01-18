@@ -45,3 +45,8 @@ void Board::setBlank(int index) {
 	std::pair<int,int> pos = indexToCoords(index);
 	tiles[index] = new NoItem(pos.first, pos.second);
 }
+
+bool Board::isEmpty(int x, int y) {
+	AbstractItem *item = getItem(x,y);
+	return typeid(*item) == typeid(NoItem);
+}
