@@ -8,15 +8,9 @@
 #include "../include/Game.h"
 
 Game::Game() {
-	// init all screens
-	GameplayScreen gameplayScreen;
-
-	// store them in the array
-	screens[0] = gameplayScreen;
-
-	activeScreen = gameplayScreen;
+	activeScreen = &gameplayScreen;
 }
 
 void Game::update() {
-	activeScreen.update();
+	activeScreen->update();
 }

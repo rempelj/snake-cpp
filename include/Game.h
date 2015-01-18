@@ -12,8 +12,9 @@
 
 class Game {
 private:
-	Screen screens[1];
-	Screen activeScreen;
+	GameplayScreen gameplayScreen;
+
+	Screen *activeScreen;
 
 public:
 	Game();

@@ -11,10 +11,13 @@
 #include <stdio.h>
 
 class Screen {
+protected:
+	Screen(){}
+
 public:
-	virtual void update(){
-		printf("base screen update (this shouldn't be happening)\n");
-	}
+	virtual void update() = 0;
+
+	virtual ~Screen(){}
 };
 
 
